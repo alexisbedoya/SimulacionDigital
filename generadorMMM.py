@@ -59,6 +59,7 @@ def generarMultiplicativo():
   listx2=[]
   listx1.append(x)
 
+
   for _ in range(m):
       res = ((a * x)) % m
       listx2.append(res)
