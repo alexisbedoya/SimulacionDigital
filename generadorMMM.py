@@ -49,11 +49,11 @@ def generarMixto():
       if(listx1.count(x)>1):
           break
   return list
+
 def generarMultiplicativo():
   x = int(input("Ingrese la semilla: "))
   a= int(input("Ingrese a: "))
   m = int(input("Ingrese m: "))
-
   list=[]
   listx1=[]
   listx2=[]

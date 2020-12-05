@@ -54,8 +54,9 @@ def operacion(NSA):
       contador.append(cont)
       print("--------------------------------------------------")
       cont=0
+      
   """ 
-  #alex
+  #gaylex
   def contadorrango(x, y, intervaloc):
       x = np.floor(x/intervaloc).astype(int) 
       y = np.floor(y/intervaloc).astype(int) 
