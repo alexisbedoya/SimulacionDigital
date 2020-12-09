@@ -32,22 +32,20 @@ def generarMixto():
   x = int(input("Ingrese la semilla: "))
   a= int(input("Ingrese a: "))
   c = int(input("Ingrese c: "))
-  m = int(input("Ingrese m: "))
+  m = 2**31#int(input("Ingrese m: "))
 
   list=[]
   listx1=[]
   listx2=[]
   listx1.append(x)
 
-  for _ in range(m):
+  for _ in range(1000):
       res=((a*x)+c)%m
       #res = ((a * x)) % m
       listx2.append(res)
       list.append(res/(m))
       x = res
       listx1.append(res)
-      if(listx1.count(x)>1):
-          break
   return list
 
 def generarMultiplicativo():

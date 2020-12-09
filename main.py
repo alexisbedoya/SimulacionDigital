@@ -1,13 +1,20 @@
 
-'''import Varianza as vr
+import Series as se
+
+
+
+import CorridaM as crM
+
+import distancia as dt
+import Corrida as cr
+import Varianza as vr
+
+
+import generadorMMM as mc
 import Promedio as pr
 import Kormogorov as kv
 import Frecuencia as fr
-import distancia as dt
-import CorridaM as crM
-import Corrida as cr
-import generadorMMM as mc'''
-import Series as se
+
 NSA1=[0.03991,0.10461,0.93716,0.16894,0.98953,
 0.38555, 0.95554, 0.32886, 0.59780, 0.09958,
 0.17546, 0.73704, 0.92052, 0.46215, 0.15917,
@@ -70,15 +77,53 @@ NSA=[0.7896, 0.0523 ,0.1070, 0.5588, 0.1415,
 
 0.2229, 0.0728, 0.6418 ,0.4427 ,0.7210
 ]
-'''
-vr.operacion(NSA)
 
-pr.operacion(NSA)
+NSA2=[0.5718, 0.6955, 0.372, 0.8384, 0.2914, 0.4913, 0.1375, 0.8906, 0.3168, 0.0362, 0.131, 0.7161, 0.2799, 0.8344, 0.6223, 0.7257, 0.664, 0.0896, 0.8028, 0.4487, 0.1331, 0.7715, 0.5212, 0.1649, 0.7192, 0.7248, 0.5335, 0.4622, 0.3628, 0.1623, 0.6341, 0.2082, 0.3347, 0.2024, 0.0965, 0.9312, 0.7133, 0.8796, 0.3696, 0.6604, 0.6128, 0.5523, 0.5035, 0.3512, 0.3341, 0.1622, 0.6308, 0.7908, 0.5364, 0.7724, 0.6601, 0.5732, 0.8558, 0.2393, 0.7264, 0.7656, 0.6143, 0.7364, 0.2284, 0.2166, 0.6915, 0.8172, 0.7815, 0.0742, 0.5505, 0.305, 0.3025, 0.1506, 0.268, 0.1824, 0.3269, 0.6863, 0.1007, 0.014, 0.0196, 0.0384, 0.1474, 0.1726, 0.979, 0.8441, 0.2504, 0.27, 0.29, 0.41, 0.81, 0.61, 0.21, 0.41, 0.81, 0.61, 0.21, 0.41, 0.81, 0.61, 0.21, 0.41, 0.81, 0.61, 0.21, 0.41]
 
-kv.operacion(NSA)
-fr.operacion(NSA)
-dt.operacion(NSA)
-crM.operacion(NSA)
-cr.operacion(NSA)  
 '''
+
+cr.operacion(NSA2)
+
+
+
 se.operacion(NSA)
+
+
+ 
+vr.operacion(NSA)
+'''
+x=5
+a=159
+c=245
+m=2**31
+print(m)
+
+vi=x
+aux=0
+list=[]
+listx1=[]
+listx2=[]
+listx1.append(x)
+
+for _ in range(1000):
+    res=((a*x)+c)%m
+    #res = ((a * x)) % m
+    listx2.append(res)
+    list.append(res/(m))
+    x = res
+    listx1.append(res)
+    if(listx1.count(x)>1):
+        #break
+        pass
+
+#NSA = list
+#crM.operacion(NSA)
+#mc.generarMixto()
+fr.operacion(NSA2)
+#mc.generarMixto()
+#kv.operacion(NSA)
+#pr.operacion(NSA)
+#fr.operacion(NSA)
+#mc.generarMixto()
+#kv.operacion(NSA)
+#pr.operacion(NSA)

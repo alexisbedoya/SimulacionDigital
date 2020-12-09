@@ -46,6 +46,7 @@ NSA=[0.7896, 0.0523 ,0.1070, 0.5588, 0.1415,
 """
 def operacion(NSA):
   print("----------------------Distancia------------")
+  """"
   # recorrida por columna
   test = np.array(NSA)
   w=test.reshape(20,5)
@@ -55,9 +56,7 @@ def operacion(NSA):
       ##print(index, x)
   print(listc)
   NSA=listc
-  ## fin
-
-
+  ## fin"""
 
   ls = float(0.7)
   li = float(0.3)

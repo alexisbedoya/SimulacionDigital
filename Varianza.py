@@ -16,12 +16,12 @@ def operacion(NSA):
   desv=math.sqrt(var)
   print("desviacion estandar: ", desv)
 
-  gradoLibertad = 100 -1
+  gradoLibertad = len(NSA) -1
   error = 0.025
   x1=chi2.isf(df=gradoLibertad, q=error)
   print(chi2.isf(df=gradoLibertad, q=error))
 
-  gradoLibertad = 100 -1
+  gradoLibertad = len(NSA) -1
   error = 0.975
   x2=chi2.isf(df=gradoLibertad, q=error)
   print(x2)

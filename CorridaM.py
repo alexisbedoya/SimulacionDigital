@@ -1,5 +1,6 @@
 import math
-
+import numpy as np
+from scipy.stats import chi2
 """"
 NSA=[0.03991,0.10461,0.93716,0.16894,0.98953,
 0.38555, 0.95554, 0.32886, 0.59780, 0.09958,
@@ -24,6 +25,19 @@ NSA=[0.03991,0.10461,0.93716,0.16894,0.98953,
 """
 def operacion(NSA):
   print("---------------------Corridas Arriba y Abajo -------------------------")
+
+
+    # recorrida por columna
+  test = np.array(NSA)
+  w=test.reshape(20,5)
+  listc=[]
+  for index, x in np.ndenumerate(w.T):
+      listc.append(x)
+      ##print(index, x)
+  print(listc)
+  NSA=listc
+  ## fin"""
+
   n0,n1=0,0
   corridas=[]
   for i in range(len(NSA)):
@@ -58,7 +72,8 @@ def operacion(NSA):
   FEi=((2*n0*n1)/len(NSA))+1/2
   print("FEI: ", FEi)
 
-  VAR=((2*n0*n1)*(2*n0*n1-len(NSA)))/(len(NSA)**2)*(len(NSA)-1)
+  VAR=((2*n0*n1)*(2*n0*n1-len(NSA)))/ ((len(NSA)**2)*(len(NSA)-1))
+  
   print("VAR: ", VAR)
 
   Zo=abs(FO-FEi)/math.sqrt(VAR)

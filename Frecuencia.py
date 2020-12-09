@@ -39,7 +39,7 @@ def operacion(NSA):
   for z in range(len(intervalo)):
       print("Los valores inferiores a: ", intervalo[z] )
       for k in range (len(NSA)):
-          if NSA[k] <= intervalo[z]:
+          if NSA[k] < intervalo[z]:
               cont1= cont1+1
 
       aux=cont1

@@ -4,7 +4,7 @@ from scipy.stats import chi2
 def operacion(NSA):
   
   ## recorrida por columna
-  test = np.array(NSA)
+  '''test = np.array(NSA)
   w=test.reshape(20,5)
   listc=[]
   for index, x in np.ndenumerate(w.T):
@@ -12,7 +12,7 @@ def operacion(NSA):
       ##print(index, x)
   print(listc)
   NSA=listc
-  ## fin
+  ## fin'''
   
 
   lista2 =[]
@@ -49,7 +49,7 @@ def operacion(NSA):
         if lista2[z][0] <= intervalos[i] and lista2[z][1] <= intervalos[j] and lista2[z][0] > (intervalos[i]-k) and lista2[z][1] > (intervalos[j]-k):
           cont=cont+1
         # print(lista2[z])
-    # print("intervalo x", intervalos[i], "intervalo y", intervalos[j])
+      print("intervalo x", intervalos[i], "intervalo y", intervalos[j])
       print(cont)
       contador.append(cont)
       print("--------------------------------------------------")
@@ -74,6 +74,7 @@ def operacion(NSA):
 
 
   FEi=len(lista2)/(len(intervalos)**2)
+  print("Fei:", FEi)
   #contador2=[i for i in contador if contador.count(i)<2]
   contador2=[]
   for item in contador:
